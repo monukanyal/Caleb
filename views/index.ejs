@@ -1,0 +1,271 @@
+<% include partials/header %>
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+  
+  <div class="navbar-inner">
+    
+    <div class="container">
+    
+        <a class="brand" href="index.html">
+        SHAREVEST       
+      </a>    
+  
+
+      <form class="navbar-search secrh_cstm">
+          <input type="text" class="search-query" placeholder="Search for a person or company">
+            <i class="icon-search " aria-hidden="true"></i>
+
+      </form>
+
+        <div class="subnavbar">
+        <ul class="mainnav">
+            <li class="active">
+               <a href="../">
+                 <i class="icon-home " aria-hidden="true"></i>
+                <span>Home</span>
+               </a>             
+              </li>
+            <li >
+              <a href="../form">
+                <img src="./img/raise.png">
+                <span>Raise</span>
+              </a>            
+            </li>
+              <li>          
+              <a href="">
+               <!--  <i class="icon-facetime-video"></i> -->
+               <img src="./img/invest.png">
+                <span>Invest</span>
+            </a>                    
+             </li>
+                     <li>         
+              <a href="">
+               <img src="./img/folder.png">
+                <span>Data</span>
+              </a>                    
+            </li>
+                     <li>          
+              <a href="">
+                <img src="./img/lend.png">
+                <span>Lend</span>
+              </a>                    
+            </li>
+               <li>          
+              <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
+               <i class="icon-briefcase" aria-hidden="true"></i>
+                <span>Trade</span>
+              </a>  
+            </li>
+            <li class="me_last">           
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            <img src="./img/signin/user.png">
+              Me
+              <b class="caret"></b>
+            </a>          
+          </li>
+           </ul>
+   
+
+      </div> <!-- /subnavbar -->
+         </div>
+  
+    </div> <!-- /container -->
+    
+  </div> <!-- /navbar-inner -->
+  
+</div> <!-- /navbar -->
+
+<div class="main main_outer">
+
+  <div class="main-inner">
+    <div class="container">
+      <h2>Create a new campaign</h2>
+      <div class="row">
+        <div class="span6 span_custom">
+          <div class="widget">
+              
+            <!-- /widget-header -->
+            <div class="widget-content custom_content">
+            <h3 style="text-align: center;">Equity Crowdfunding</h3>
+              <div class="text-center">
+                <img src="./img/default.png">
+                <div class="">
+                  <h6 class="custom_big">Raise money with the quity crowdfunding, <b><i> investors will get a financial stake in your company.</i></b> They will be able to sell their shares in the future. </h6>
+                </div>
+                <!-- /widget-content --> 
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /span6 -->
+        <div class="span6 span_custom">
+          <div class="widget">
+            
+            <!-- /widget-header -->
+            <div class="widget-content custom_content">
+              <h3 style="text-align: center;">Debt Crowdlending</h3>
+            <div class="text-center">
+              <img src="./img/default.png">
+              <h6 class="custom_big"> Receive capital via <b><i>a loan from a community of lenders and pay them back</i></b> within the loan term time.They will be able to resell the debt.</h6>
+              <!-- /shortcuts -->
+            </div>
+            <!-- /widget-content -->
+            </div>
+            </div>
+      </div>
+      <!-- /row -->
+    </div>
+    <!-- /container -->
+      <div>
+        <h2>Your Campaigns</h2>
+           <table class="table custom_table">
+            <tr>
+                <td class="today">TODAY 2LET LIMITED</td>
+                <td class="equity">Equity</td>
+                <td class="equity">Draft</td>
+                <td colspan="4"></td>
+                <td class="button_td button_section"><button type="button">Edit</button></td>
+                <td class="button_td button_section"><button type="button">Remove</button></td>
+            </tr>
+          </table>
+      </div>
+  </div>
+  <!-- /main-inner -->
+</div>
+<!-- /main -->
+
+<% include partials/footer %>
+
+<!-- Placed at the end of the document so the pages load faster --> 
+<script src="js/jquery-1.7.2.min.js"></script> 
+<script src="js/excanvas.min.js"></script> 
+<script src="js/chart.min.js" type="text/javascript"></script> 
+<script src="js/bootstrap.js"></script>
+<script language="javascript" type="text/javascript" src="js/full-calendar/fullcalendar.min.js"></script>
+ 
+<script src="js/base.js"></script> 
+<script>     
+
+        var lineChartData = {
+            labels: ["January", "February", "March", "April", "May", "June", "July"],
+            datasets: [
+				{
+				    fillColor: "rgba(220,220,220,0.5)",
+				    strokeColor: "rgba(220,220,220,1)",
+				    pointColor: "rgba(220,220,220,1)",
+				    pointStrokeColor: "#fff",
+				    data: [65, 59, 90, 81, 56, 55, 40]
+				},
+				{
+				    fillColor: "rgba(151,187,205,0.5)",
+				    strokeColor: "rgba(151,187,205,1)",
+				    pointColor: "rgba(151,187,205,1)",
+				    pointStrokeColor: "#fff",
+				    data: [28, 48, 40, 19, 96, 27, 100]
+				}
+			]
+
+        }
+
+        var myLine = new Chart(document.getElementById("area-chart").getContext("2d")).Line(lineChartData);
+
+
+        var barChartData = {
+            labels: ["January", "February", "March", "April", "May", "June", "July"],
+            datasets: [
+				{
+				    fillColor: "rgba(220,220,220,0.5)",
+				    strokeColor: "rgba(220,220,220,1)",
+				    data: [65, 59, 90, 81, 56, 55, 40]
+				},
+				{
+				    fillColor: "rgba(151,187,205,0.5)",
+				    strokeColor: "rgba(151,187,205,1)",
+				    data: [28, 48, 40, 19, 96, 27, 100]
+				}
+			]
+
+        }    
+
+        $(document).ready(function() {
+        var date = new Date();
+        var d = date.getDate();
+        var m = date.getMonth();
+        var y = date.getFullYear();
+        var calendar = $('#calendar').fullCalendar({
+          header: {
+            left: 'prev,next today',
+            center: 'title',
+            right: 'month,agendaWeek,agendaDay'
+          },
+          selectable: true,
+          selectHelper: true,
+          select: function(start, end, allDay) {
+            var title = prompt('Event Title:');
+            if (title) {
+              calendar.fullCalendar('renderEvent',
+                {
+                  title: title,
+                  start: start,
+                  end: end,
+                  allDay: allDay
+                },
+                true // make the event "stick"
+              );
+            }
+            calendar.fullCalendar('unselect');
+          },
+          editable: true,
+          events: [
+            {
+              title: 'All Day Event',
+              start: new Date(y, m, 1)
+            },
+            {
+              title: 'Long Event',
+              start: new Date(y, m, d+5),
+              end: new Date(y, m, d+7)
+            },
+            {
+              id: 999,
+              title: 'Repeating Event',
+              start: new Date(y, m, d-3, 16, 0),
+              allDay: false
+            },
+            {
+              id: 999,
+              title: 'Repeating Event',
+              start: new Date(y, m, d+4, 16, 0),
+              allDay: false
+            },
+            {
+              title: 'Meeting',
+              start: new Date(y, m, d, 10, 30),
+              allDay: false
+            },
+            {
+              title: 'Lunch',
+              start: new Date(y, m, d, 12, 0),
+              end: new Date(y, m, d, 14, 0),
+              allDay: false
+            },
+            {
+              title: 'Birthday Party',
+              start: new Date(y, m, d+1, 19, 0),
+              end: new Date(y, m, d+1, 22, 30),
+              allDay: false
+            },
+            {
+              title: 'EGrappler.com',
+              start: new Date(y, m, 28),
+              end: new Date(y, m, 29),
+              url: 'http://EGrappler.com/'
+            }
+          ]
+        });
+      });
+    </script><!-- /Calendar -->
+</body>
+</html>
