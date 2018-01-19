@@ -6,6 +6,7 @@
   <div class="navbar-inner">
     
     <div class="container">
+    	<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span> </a>
    		<a class="brand" href="index.html">
         SHAREVEST       
       </a>    
@@ -17,15 +18,15 @@
       </form>
 
         <div class="subnavbar">
-        <ul class="mainnav">
+        <ul class="nav-collapse collapse mainnav">
             <li>
-               <a href="../">
+               <a href="">
                  <i class="icon-home " aria-hidden="true"></i>
                 <span>Home</span>
                </a>             
               </li>
             <li class="active">
-              <a href="../form">
+              <a href="../">
                 <img src="./img/raise.png">
                 <span>Raise</span>
               </a>            
@@ -95,19 +96,19 @@
 					<div class="tabbable">
 						<div class="tabs_center">
 							<ul class="nav nav-tabs">
-							  <li class="active">
+							  <li class="summ_tab active" id="summary_tab">
 							    	<a href="#summary" data-toggle="tab">Summary</a>
 							  </li>
-							  <li>
+							  <li class="company_tab" id="comp">
 							  	<a href="#company" data-toggle="tab">Company</a>
 							  </li>
-							  <li>
+							  <li id="idea_tab" class="idea_tabs">
 							  	<a href="#idea" data-toggle="tab">Idea</a>
 							  </li>
-							  <li >
+							  <li id="market_tab" class="market_tabs">
 							  	<a href="#market" data-toggle="tab">Market</a>
 							  </li>
-							  <li>
+							  <li id="team_tab" class="team_tabs">
 							  	<a href="#team" data-toggle="tab">Team</a>
 							  </li>
 						</ul>
@@ -116,7 +117,7 @@
 						<br>
 						<!-- Summary -->
 						<div class="tab-content col-12">
-							<div class="tab-pane active" id="summary">
+							<div class="tab-pane summmm_data active" id="summary">
 								<form id="edit-profile" class="form-vertical">
 									<fieldset class="outer_fieldset_control">
 									<div class="logo_cover_sec">
@@ -165,7 +166,7 @@
 											<div class="controls outer_fieldset_control">
 											<div class="col-4">
 												<label>Name of the business<sup>*</sup><p id="bus_length">30</p></label><br>
-												<input type="text" class="span4" id="business_name" value="" maxlength="30">
+												<input type="text" class="span4" id="business_name" value="" maxlength="30" required>
 											</div>
 												<p class="help-block help_custom">This should be the brand name of your business, not it's official or legal name. think "google" rather then "google LTD" or "google.com"</p>
 											</div> <!-- /controls -->				
@@ -177,7 +178,7 @@
 											<div class="controls outer_fieldset_control">
 											<div class="col-4">
 												<label>Summary<sup>*</sup><p id="sum_length">105</p></label><br>
-											 <textarea cols="15" rows="9" maxlength="105" id="summary_field"></textarea>
+											 <textarea cols="15" rows="9" maxlength="105" id="summary_field" required></textarea>
 											</div>
 
 												
@@ -191,7 +192,7 @@
 											<div class="col-4">
 												<label>Campaign Type<sup>*</sup></label>
 											<div class="controls outer_fieldset_control">
-												<select>
+												<select required>
 													<option>Equity</option>
 													<option>Equity1</option>
 													<option>Equity2</option>	
@@ -209,7 +210,7 @@
 											<div class="col-4">
 													<label>Currency<sup>*</sup></label>
 											<div class="controls outer_fieldset_control">
-												<select name="currency">
+												<select name="currency" required>
 													<option selected="selected">
 												        USD United States Dollars
 												    </option>
@@ -488,7 +489,7 @@
 										<div class="control-group">											<div class="col-4">
 												<label>Minimum Investment Sought<sup>*</sup></label>
 											<div class="controls outer_fieldset_control">
-												<select>
+												<select required>
 													<option>$</option>
 													<option>$</option>
 													<option>$</option>	
@@ -503,7 +504,7 @@
 										<div class="control-group">											<div class="col-4 owner_custom">
 											<label>Percentage of the equity offered<sup>*</sup></label>
 											<div class="controls outer_fieldset_control">
-												<input type="text" class="span4" id="equity_offered" value="" placeholder="%">
+												<input type="text" class="span4" id="equity_offered" value="" placeholder="%" required>
 										</div>
 												
 											</div> <!-- /controls -->	
@@ -513,7 +514,7 @@
                                         <div class="control-group">											<div class="col-4">
                                         		<label>Valuation(pre-money)<sup>*</sup></label>
 											<div class="controls outer_fieldset_control">
-												<input type="text" class="span4" id="valuation" value="$">
+												<input type="text" class="span4" id="valuation" value="$" required>
                                         </div>
 												
 											</div> <!-- /controls -->	
@@ -526,7 +527,7 @@
                                         <div class="control-group">										<div class="col-4">	
 												<label>Sector<sup>*</sup></label>
 												<div class="controls outer_fieldset_control">
-	                                           	<select>
+	                                           	<select required>
 	                                           		<option>Please select one</option>
 	                                           		<option>Test</option>
 	                                           		<option>Test1</option>
@@ -538,7 +539,7 @@
                                         <div class="control-group">										<div class="col-4">		
 											<label>Digitisation<sup>*</sup></label>
 											<div class="controls outer_fieldset_control">
-                                           	<select>
+                                           	<select required> 
                                            		<option>Please select one</option>
                                            		<option>Test</option>
                                            		<option>Test1</option>
@@ -550,7 +551,7 @@
                                         <div class="control-group">										<div class="col-4">		
 											<label>Customer Type<sup>*</sup></label>
 											<div class="controls outer_fieldset_control">
-                                           	<select>
+                                           	<select required>
                                            		<option>Please select one</option>
                                            		<option>Test</option>
                                            		<option>Test1</option>
@@ -565,8 +566,8 @@
 									
                                 	</fieldset>
                                 	 <div class="button_section pull-right">	
-                            	<button type="submit" class="btn">Preview</button>
-                            	<button type="submit" class="btn">Submit Campaign</button>
+                            	<button type="button" class="btn" id="summary_btn">Next</button>
+                            	<!-- <button type="submit" class="btn">Submit Campaign</button> -->
                            </div>
 						</form>
 
@@ -574,7 +575,7 @@
 						 
 							
 					    <!-- Company -->
-						<div class="tab-pane" id="company">
+						<div class="tab-pane comp_data" id="company">
 						
 							<form id="edit-profile2" class="form-vertical">
 							<fieldset class="outer_fieldset_control">
@@ -586,7 +587,7 @@
 										<label>Country<sup>*</sup></label>
 										<div class="controls controls outer_fieldset_control">
 											
-											<select name="country">
+											<select name="country" required>
 												<option>Please select one</option>
 												<option value="Afganistan">Afghanistan</option>
 												<option value="Albania">Albania</option>
@@ -1333,8 +1334,8 @@
 										</div> 
 										
 										<div class="button_section pull-right">	
-                                           	<button type="submit" class="btn">Preview</button>
-                                           	<button type="submit" class="btn">Submit Campaign</button>
+                                           
+                                           <button type="button" class="btn" id="company_btn">Next</button>
                                         </div>
                                 </fieldset>
 						   </form>
@@ -1342,7 +1343,7 @@
 				    	</div>
 								
 					    <!-- Idea -->
-						<div class="tab-pane" id="idea">
+						<div class="tab-pane idea_data" id="idea">
 							<form id="edit-profile" class="form-vertical">
 						    	<fieldset class="outer_fieldset_control">
 										<div class="control-group">	
@@ -1411,14 +1412,14 @@
 									
 								</fieldset>
 								<div class="button_section pull-right">	
-                                           	<button type="submit" class="btn">Preview</button>
-                                           	<button type="submit" class="btn">Submit Campaign</button>
+                                           
+                                       <button type="button" class="btn" id="idea_btn">Next</button>
                                        	</div>
 							</form>
 						</div>
 
 						<!-- Market -->
-						<div class="tab-pane" id="market">
+						<div class="tab-pane market_data" id="market">
 							<form id="edit-profile" class="form-vertical">
 								<fieldset class="outer_fieldset_control">
 
@@ -1477,8 +1478,8 @@
 
 									<div class="">
 										<div class="button_section pull-right">	
-                                        	<button type="submit" class="btn">Preview</button>
-                                        	<button type="submit" class="btn">Submit Campaign</button>
+                                        	
+                                        	<button type="button" class="btn" id="market_btn">Next</button>
                                         	</div>
 									</div> <!-- /form-actions -->
 								</fieldset>
@@ -1486,7 +1487,7 @@
 						</div>
 
 						<!-- Team -->	
-						<div class="tab-pane" id="team">
+						<div class="tab-pane team_data" id="team">
 							<form id="edit-profile" class="form-vertical">
 								<fieldset class="outer_fieldset_control">
 								  <div id="add_team_member">	
@@ -2103,8 +2104,8 @@
 							</div><!-- add team member end -->
 								<div class="button_section pull-right">
 									<div class="control-group">	
-                                    	<button type="submit" class="btn">Preview</button>
-                                    	<button type="submit" class="btn">Submit Campaign</button>
+                                    	
+                                    	<button type="button" class="btn" id="market_btn">Submit Campaign</button>
                                     	</div>
 								</div> <!-- /form-actions -->
 
@@ -2249,6 +2250,45 @@ $(document).ready(function()
 			});
 		});
 
+
+		// $(".company_tab").prop( "disabled", true );
+		// $("#idea_tab").prop( "disabled", true );
+		// $("#market_tab").prop( "disabled", true );
+		// $("#team_tab").prop( "disabled", true );
+ 		
+ 		$("#summary_btn").click(function(){
+			// $(".company_tab").prop( "disabled", false );
+			$("#comp").addClass("company_tab active");
+			$("#company").addClass("comp_data active");
+			$("#summary_tab").removeClass("summ_tab active");
+			$("#summary").removeClass("summmm_data active");
+		});
+
+
+ 		$("#company_btn").click(function(){
+			// $("#idea_tab").prop( "disabled", false );
+			$("#idea_tab").addClass("idea_tabs active");
+			$("#idea").addClass("idea_data active");
+			$("#comp").removeClass("company_tab active");
+			$("#company").removeClass("comp_data active");
+		});
+
+		$("#idea_btn").click(function(){
+			// $("#idea_tab").prop( "disabled", false );
+			$("#market_tab").addClass("market_tabs active");
+			$("#market").addClass("market_data active");
+			$("#idea_tab").removeClass("idea_tabs active");
+			$("#idea").removeClass("idea_data active");
+		});
+
+		$("#market_btn").click(function(){
+			// $("#idea_tab").prop( "disabled", false );
+			$("#team_tab").addClass("team_tabs active");
+			$("#team").addClass("team_data active");
+			$("#market_tab").removeClass("market_tabs active");
+			$("#market").removeClass("market_data active");
+		});
 });
     
 </script>
+
